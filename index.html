@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script>
+    var app = tcb.init({
+      env: 'abc-9771d3'
+    })
+    var auth = app.auth()
+    auth.weixinAuthProvider({
+        appid: 'wx350ab6cd61b774c4',  //微信应用appid
+        scope: 'snsapi_base'     //网页授权类型
+    }).signIn((err, res) => {
+      console.log(res)
+    })
+    // tcb.auth({
+    //   persistence: 'session'
+    // }).weixinAuthProvider({
+    //   appid: 'wx350ab6cd61b774c4',
+    //   scope: 'snsapi_base'
+    // }).signIn(function(err, res) {
+    //   console.log(res)
+    // })
+  </script>
 </head>
 <body>
   sdfsd
